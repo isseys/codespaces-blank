@@ -76,7 +76,7 @@ function countdown() {
   }
   document.querySelector(
     ".countdown"
-  ).innerHTML = message;
+  ).innerHTML = `<h1>Hello </h1>`;
 }
 
 let i = setInterval(countdown, 1000);
