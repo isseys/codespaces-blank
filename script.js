@@ -14,22 +14,39 @@ function countdown() {
   let oneDay = 24 * oneHr;
 
   let addZeroes = (num) => (num < 10 ? `0${num}` : num);
+  let message = '';
 
   if (endTime < todayTime) {
     clearInterval(i);
+    message = "<h1>WHISH YOU ALL A VERY HAPPY NEW YEAR 2023";
     document.querySelector(
       ".countdown"
-    ).innerHTML = `<h1>Countdown Has Expired</h1>`;
+    ).innerHTML = message;
   } else {
     let daysLeft = Math.floor(remainingTime / oneDay);
     let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
     let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
     let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
-
-    dayBox.textContent = addZeroes(daysLeft);
-    hrBox.textContent = addZeroes(hrsLeft);
-    minBox.textContent = addZeroes(minsLeft);
-    secBox.textContent = addZeroes(secsLeft);
+    
+    if(daysLeft > 0){
+      message = `<div class='box'>
+      <span class='num' id='day-box'>${daysLeft}</span>
+      <span class='text'>Days</span>
+    </div>`
+    }
+    if(hrsLeft > 0){
+      message = message + `<div class='box'>
+      <span class='num' id='day-box'>${hrsLeft}</span>
+      <span class='text'>Hrs</span>
+    </div>`
+    }
+    // dayBox.textContent = addZeroes(daysLeft);
+    // hrBox.textContent = addZeroes(hrsLeft);
+    // minBox.textContent = addZeroes(minsLeft);
+    // secBox.textContent = addZeroes(secsLeft);
+    document.querySelector(
+      ".countdown"
+    ).innerHTML = message;
   }
 }
 
