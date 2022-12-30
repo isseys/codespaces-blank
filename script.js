@@ -38,6 +38,7 @@ function countdown() {
       ".countdown"
     ).innerHTML = message;
   } else {
+    alert("not end");
     let daysLeft = Math.floor(remainingTime / oneDay);
     let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
     let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
