@@ -12,11 +12,11 @@
     color: var(--color-white);
   }
   body {
-    background: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0861-1024x683.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    animation: change 60s infinite ease-in-out;
   }
   .wrapper {
     position: absolute;
@@ -53,6 +53,7 @@
     gap: 10px;
   }
   .box {
+    background-color: var(--color-glass);
     width: 28vmin;
     height: 29vmin;
     display: flex;
@@ -94,3 +95,29 @@
     border-radius: 0.3em;
     box-shadow: var(--color-shadow);
   }
+  @keyframes change{
+    0%
+    {
+        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0940-1024x683.jpg);
+    }
+    20%
+    {
+        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0861-1024x683.jpg);
+    }
+    40%
+    {
+        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0838-1024x683.jpg);
+    }
+    60%
+    {
+        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/DJI-WAVE_0027-1024x681.jpg);
+    }
+    80%
+    {
+        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0606-1024x683.jpg);
+    }
+    100%
+    {
+        background-image: url(https://3smaldives.com/wp-content/uploads/2017/08/3s-Restaurant13-1024x722.jpg);
+    }
+}
