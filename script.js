@@ -33,7 +33,7 @@ function countdown() {
     let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
     let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
     let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
-    
+    message = "";
     if(daysLeft > 0){
       message = `<div class='box'>
       <span class='num' id='day-box'>${daysLeft}</span>
