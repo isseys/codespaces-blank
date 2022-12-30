@@ -17,9 +17,9 @@ function countdown() {
   let addZeroes = (num) => (num < 10 ? `0${num}` : num);
   let message = '';
 
-  if (endTime > todayTime) {
+  if (endTime < todayTime) {
     clearInterval(i);
-    message = "<h1>HAPPY NEW YEAR</h1>" + 
+    message = `<h1>HAPPY NEW YEAR</h1>` + 
       `<div class='box'>
         <span class='num' id='day-box'>2</span>
       </div>` +
