@@ -34,9 +34,6 @@ function countdown() {
         <span class='num' id='day-box'>3</span>
       </div>`
       ;
-    document.querySelector(
-      ".countdown"
-    ).innerHTML = message;
   } else {
     alert("not end");
     let daysLeft = Math.floor(remainingTime / oneDay);
@@ -75,10 +72,11 @@ function countdown() {
     // hrBox.textContent = addZeroes(hrsLeft);
     // minBox.textContent = addZeroes(minsLeft);
     // secBox.textContent = addZeroes(secsLeft);
-    document.querySelector(
-      ".countdown"
-    ).innerHTML = message;
+    
   }
+  document.querySelector(
+    ".countdown"
+  ).innerHTML = message;
 }
 
 let i = setInterval(countdown, 1000);
