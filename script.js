@@ -17,9 +17,22 @@ function countdown() {
   let addZeroes = (num) => (num < 10 ? `0${num}` : num);
   let message = '';
 
-  if (endTime < todayTime) {
+  if (endTime > todayTime) {
     clearInterval(i);
-    message = "<h1>WHISH YOU ALL A VERY HAPPY NEW YEAR 2023";
+    message = "<h1>HAPPY NEW YEAR</h1>" + 
+      `<div class='box'>
+        <span class='num' id='day-box'>2</span>
+      </div>` +
+      `<div class='box'>
+        <span class='num' id='day-box'>0</span>
+      </div>` +
+      `<div class='box'>
+        <span class='num' id='day-box'>2</span>
+      </div>` +
+      `<div class='box'>
+        <span class='num' id='day-box'>3</span>
+      </div>`
+      ;
     document.querySelector(
       ".countdown"
     ).innerHTML = message;
@@ -39,13 +52,16 @@ function countdown() {
       message = message + `<div class='box'>
       <span class='num' id='day-box'>${hrsLeft}</span>
       <span class='text'>Hrs</span>
-    </div>`
-    }
-    if(minsLeft > 0){
-      message = message + `<div class='box'>
+    </div>` +
+    `<div class='box'>
       <span class='num' id='day-box'>${minsLeft}</span>
       <span class='text'>Mins</span>
     </div>`
+    }else if(minsLeft > 0){
+      message = message + `<div class='box'>
+        <span class='num' id='day-box'>${minsLeft}</span>
+        <span class='text'>Mins</span>
+      </div>`
     }
 
       message = message + `<div class='box'>
