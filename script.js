@@ -18,7 +18,6 @@ function countdown() {
   let message = '';
 
   if (endTime < todayTime) {
-    alert("ended");
     clearInterval(i);
     message = `<h1>HAPPY NEW YEAR</h1>` + 
       `<div class='box'>
@@ -35,7 +34,6 @@ function countdown() {
       </div>`
       ;
   } else {
-    alert("not end");
     let daysLeft = Math.floor(remainingTime / oneDay);
     let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
     let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
@@ -76,7 +74,7 @@ function countdown() {
   }
   document.querySelector(
     ".countdown"
-  ).innerHTML = `<h1>Hello </h1>`;
+  ).innerHTML = "<h1>Hello </h1>";
 }
 
 let i = setInterval(countdown, 1000);
