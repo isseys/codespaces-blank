@@ -18,6 +18,7 @@ function countdown() {
   let message = '';
 
   if (endTime < todayTime) {
+    alert("ended");
     clearInterval(i);
     message = `<h1>HAPPY NEW YEAR</h1>` + 
       `<div class='box'>
