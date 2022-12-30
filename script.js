@@ -2,6 +2,7 @@ let dayBox = document.getElementById("day-box");
 let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
+let yearH = document.getElementById('year');
 let endDate = new Date(2023, 0, 1, 00, 00);
 let endTime = endDate.getTime();
 
@@ -12,7 +13,7 @@ function countdown() {
   let oneMin = 60 * 1000;
   let oneHr = 60 * oneMin;
   let oneDay = 24 * oneHr;
-
+  yearH.textContent = endDate.getFullYear();
   let addZeroes = (num) => (num < 10 ? `0${num}` : num);
   let message = '';
 
@@ -40,6 +41,18 @@ function countdown() {
       <span class='text'>Hrs</span>
     </div>`
     }
+    if(minsLeft > 0){
+      message = message + `<div class='box'>
+      <span class='num' id='day-box'>${minsLeft}</span>
+      <span class='text'>Mins</span>
+    </div>`
+    }
+
+      message = message + `<div class='box'>
+      <span class='num' id='day-box'>${secsLeft}</span>
+      <span class='text'>Secs</span>
+    </div>`
+
     // dayBox.textContent = addZeroes(daysLeft);
     // hrBox.textContent = addZeroes(hrsLeft);
     // minBox.textContent = addZeroes(minsLeft);
