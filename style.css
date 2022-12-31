@@ -98,26 +98,26 @@
   @keyframes change{
     0%
     {
-        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0940-1024x683.jpg);
+        background-image: url(img/1.png);
     }
     20%
     {
-        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0861-1024x683.jpg);
+        background-image: url(img/2.png);
     }
     40%
     {
-        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0838-1024x683.jpg);
+        background-image: url(img/3.png);
     }
     60%
     {
-        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/DJI-WAVE_0027-1024x681.jpg);
+        background-image: url(img/4.png);
     }
     80%
     {
-        background-image: url(https://3smaldives.com/wp-content/uploads/2017/09/3s_0606-1024x683.jpg);
+        background-image: url(img/5);
     }
     100%
     {
-        background-image: url(https://3smaldives.com/wp-content/uploads/2017/08/3s-Restaurant13-1024x722.jpg);
+        background-image: url(img/6.png);
     }
 }
